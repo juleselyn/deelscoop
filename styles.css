@@ -1,0 +1,29 @@
+#map-container {
+  position: relative;
+  width: 100%; /* Adjust based on your map size */
+  height: 100vh;
+  background: url('world_map.png') no-repeat center center;
+  background-size: cover;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulsate 1s infinite;
+  z-index: 1000; /* Ensures dots are above other elements */
+}
+
+#tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  z-index: 1010; /* Higher than dots */
+  white-space: nowrap; /* Keeps the text in a single line */
+}
